@@ -1,0 +1,102 @@
+
+<div class="container-fluid login">
+    <div class="row ">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-dark bg-white ">
+
+            <div class="text-center text-heading">
+                <h1> <span class="text-primary">OptiPro</span> <span class="text-warning">ERP</span> </h1><span
+                    class="manufacturing">MANUFACTURING</span>
+            </div>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div style="padding-bottom: 24px;">
+                    <p class="log-button">Login As</p>
+                    <input id="gender" type="radio" name="control" formControlName="usercontrol" checked>&nbsp;
+                    <label for="admin">Admin</label>&nbsp;
+                    <input id="gender" type="radio" name="control" formControlName="usercontrol">&nbsp;
+                    <label for="admin">User</label>
+                </div>
+                <div>
+                    <label for="admin">Username*</label>
+                    <div class="form-floating mb-3">
+                        <div>
+                            <input type="email" class="form-control"  placeholder="name@example.com"
+                                formControlName="email" 
+                                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" >
+                            <!-- <span class="font-user"><i class="fa fa-user"></i></span> -->
+                        </div>
+
+                        <div *ngIf="submitted && f.email.errors" class="text-danger">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+
+                    </div>
+                    <label for="admin">password*</label>
+                    <div class="form-floating mb-3">
+                        <div>
+                            <input type="password" class="form-control"  placeholder="Password"
+                                formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                                id="inputPassword4">
+                        </div>
+                        <div *ngIf="submitted && f.password.errors" class="text-danger">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf=" f.password.errors.minlength">
+                                This field must have at least 6 characters.
+                              </div>
+                        </div>
+
+                    </div>
+                    <div  class="d-grid" >
+                        <button class="btn btn-primary  mb-2"
+                            type="submit">Connect</button>
+
+                    </div>
+
+                    <div *ngIf="isShown">
+                        <div>
+                            <label>Company *</label>
+                            <select name="selectedQuantity" class="form-control"
+                               >
+                                <option >select</option>
+                                <option>optipro</option>
+                                <option>basecamp</option>
+                                <option>Erp</option>
+                            </select>
+                        </div>
+                
+                        <div>
+                            <label >Product *</label>
+                            <select name="selectedQuantity"  class="form-control"
+                                >
+                                <option >select</option>
+                                <option>optipro</option>
+                                <option>basecamp</option>
+                                <option>Erp</option>
+                            </select>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                            <label class="form-check-label" for="rememberPasswordCheck">
+                                Remember password
+                            </label>
+                        </div>
+                        <div class="col-md-12">
+                       
+                            <button class="btn btn-primary btn-logins mb-2"
+                                type="submit">Login</button>                        
+                                &nbsp;
+                            <button class="btn btn-warning btn-reset mb-2"
+                                type="submit">Reset</button>                       
+
+                    </div>
+                    </div>
+
+                 
+                </div>
+            </form>
+
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

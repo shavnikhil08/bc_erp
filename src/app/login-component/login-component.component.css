@@ -1,0 +1,39 @@
+ .login {
+    min-height: 100vh;
+    background-image: url('../../assets/images/2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 10%;    
+    
+  } 
+  .manufacturing{
+  position: relative;
+    bottom: 20px;
+    margin: 45px;
+}
+.text-heading{
+   background-color: rgb(180, 181, 182);
+   margin: 0px -12px;
+}
+
+.log-button{
+    padding: 18px 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.font-user{
+    float: left;
+    margin-left: 9px;
+    margin-top: -31px;
+    position: relative;
+    z-index: 2;
+    border: gray;
+    
+}
+.btn-logins{
+    width: 200px;
+}
+.btn-reset{
+    width: 200px;
+}
